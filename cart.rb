@@ -10,7 +10,7 @@ class Cart
     
     def save_to_file
         File.open("#{@owner}_cart.txt", "w") do |f|
-            @items.each { |i| f.puts "#{i.name}:#{i.price}:#{i.weight}"} # car:100:50
+            @items.each { |i| f.puts i.to.s} # car:100:50
         end
     end
 
@@ -27,3 +27,4 @@ class Cart
      
 
 end
+    
