@@ -1,7 +1,7 @@
 class Item
   attr_reader :real_price, :name # створення гетерра
   attr_writer :price #створення сеттера
-  #attr_accessor :weight # створення і гетерра і сетерра
+  attr_accessor :weight # створення і гетерра і сетерра
 
   @@discount =0.05 # змінна класу
 
@@ -23,6 +23,7 @@ class Item
     #price.to_s + "," + weight.to_s + "," + name.to_s 
     yield (price)
     yield (name)
+    yield (weight)
 
   end
 
